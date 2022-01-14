@@ -1,0 +1,1 @@
+An advanced version of the famous game "Simon" to be integrated onto a Nucleo STM32 Board.

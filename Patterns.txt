@@ -1,0 +1,181 @@
+Patterns
+
+Layout:
+
+Green   Red
+    1   2
+
+    3   4
+Yellow  Blue
+
+1. Idle pattern (infinite)
+
+    In a clockwise pattern (each activates one at a time):
+        1. Button 1: Pink for 500ms
+        2. Button 2: Blue for 500ms
+        3. Button 3: Orange for 500ms
+        4. Button 4: Purple for 500ms
+        5. Repeat
+    
+2. Pattern when input is detected from idle (timed)
+
+    Have two colour flash on all buttons (let's keep this as blue for now)
+
+    All flash in sync:
+        1. All flash blue for 1000ms
+        2. All wait for 1000ms
+        3. All flash blue for 1000ms
+        4. All wait for 1000ms
+        5. End
+
+3. Waiting for passcode pattern (infinite)
+
+    Have all buttons flash their respective colours in sync
+
+    All flash in sync:
+        1.
+            1.1 Button 1: Green for 750ms
+            1.2 Button 2: Red for 750ms
+            1.3 Button 3: Yellow for 750ms
+            1.4 Button 4: Blue for 750ms
+        2. Wait for 750ms
+        3. Repeat
+
+4. Lights will mimic user button press (once) [used anytime user presses button]
+
+
+
+5. Passcode correct (timed)
+    5.1. Easy mode
+
+        Have green flash twice
+
+        All flash in sync:
+        1.
+            1.1 Button 1: Green for 750ms
+            1.2 Button 2: Green for 750ms
+            1.3 Button 3: Green for 750ms
+            1.4 Button 4: Green for 750ms
+        2. Wait for 750ms
+        3. Repeat once (total 2 times)
+            3.1 End after repeat
+
+    5.2. Moderate mode
+
+        Have green flash thrice
+
+        All flash in sync:
+        1.
+            1.1 Button 1: Green for 750ms
+            1.2 Button 2: Green for 750ms
+            1.3 Button 3: Green for 750ms
+            1.4 Button 4: Green for 750ms
+        2. Wait for 750ms
+        3. Repeat twice (total 3 times)
+            3.1 End after repeat
+
+    5.3. Difficult mode
+
+        Have green flash four times
+
+        All flash in sync:
+        1.
+            1.1 Button 1: Green for 750ms
+            1.2 Button 2: Green for 750ms
+            1.3 Button 3: Green for 750ms
+            1.4 Button 4: Green for 750ms
+        2. Wait for 750ms
+        3. Repeat thrice (total 4 times)
+            3.1 End after repeat
+
+6. Passcode incorrect pattern (timed)
+
+    Flash red 3 times, and return back to the waiting for passscode pattern
+
+    All flash in sync:
+    1.
+        1.1 Button 1: Red for 750ms
+        1.2 Button 2: Red for 750ms
+        1.3 Button 3: Red for 750ms
+        1.4 Button 4: Red for 750ms
+    2. Wait for 750ms
+    3. Repeat twice (total 3 times)
+        3.1 End after repeat
+        3.2 Return to waiting for passcode pattern
+
+7. Pattern for when user inputs the correct button during gameplay (once)
+
+    7.1. If button 1 is pressed:
+
+        1. Button 1: Green for 500ms
+
+    7.2. Quickly flash colour #2
+
+        1. Button 2: Red for 500ms
+
+    7.3. Quickly flash colour #3
+
+        1. Button 3: Yellow for 500ms
+
+    7.4. Quickly flash colour #4
+
+        1. Button 4: Blue for 500ms
+
+8. Short pattern for when user completes all patterns in that round (timed)
+
+    Spin in a circle, all flash green
+
+    In a clockwise pattern (each activates one at a time):
+    1. Button 1: Green for 250ms
+    2. Button 2: Green for 250ms
+    3. Button 3: Green for 250ms
+    4. Button 4: Green for 250ms
+    5. Wait for 250ms
+    All flash in sync:
+    6.
+        6.1 Button 1: Green for 500ms
+        6.2 Button 2: Green for 500ms
+        6.3 Button 3: Green for 500ms
+        6.4 Button 4: Green for 500ms
+    7. Wait for 500ms
+    8. Repeat all flash in sync once (total 2 times)
+
+9. Win pattern
+
+    
+
+10. Lose pattern
+
+All buttons flash red 5 times, buttons turn off one at a time
+
+All flash in sync:
+    1.
+        1.1 Button 1: Red for 500ms
+        1.2 Button 2: Red for 500ms
+        1.3 Button 3: Red for 500ms
+        1.4 Button 4: Red for 500ms
+    2. Wait for 500ms
+    3. Repeat 4 times (total 5 times)
+    4. All lights on
+    5. Wait
+    6. Button 4 turns off
+    7. Wait
+    8. Button 3 turns off
+    9. Wait
+    10. Button 2 turns off
+    11. Wait
+    12. Button 1 turns off
+    13. Wait
+
+11. Deactivate pattern
+
+All buttons flash red 3 times
+
+All flash in sync:
+    1.
+        1.1 Button 1: Red for 500ms
+        1.2 Button 2: Red for 500ms
+        1.3 Button 3: Red for 500ms
+        1.4 Button 4: Red for 500ms
+    2. Wait for 500ms
+    3. Repeat 2 times (total 3 times)
